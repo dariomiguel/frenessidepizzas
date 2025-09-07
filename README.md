@@ -4,10 +4,11 @@ Proyecto base Taller Web I (Maven and Thymeleaf)
 ## 1. Como iniciar el proyecto
 ```shell
 $ mvn clean jetty:run
-# http://localhost:8080/spring
+# http://localhost:8080/
 
 # mvn -Djetty.port=8080 -Djetty.contextPath=/ jetty:run
 # index.jsp
+$ start msedge http://localhost:8080/
 ```
 ## 2. Thymeleaf
 * [Documentacion](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
