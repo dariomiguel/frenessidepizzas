@@ -160,7 +160,7 @@
                 </configuration>
             </plugin>
 
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.4.45.v20220203</version>
@@ -171,6 +171,16 @@
                     </httpConnector>
                     <webApp>
                         <contextPath>/pizza-frenzy</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin> -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.45.v20220203</version>
+                <configuration>
+                    <webApp>
+                    <contextPath>/</contextPath>
                     </webApp>
                 </configuration>
             </plugin>

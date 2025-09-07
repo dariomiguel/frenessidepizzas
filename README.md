@@ -11,6 +11,9 @@ docker run --env-file .env --name mysql-container -d -p 3306:3306 mysql
 # Iniciamos el proyecto
 $ mvn clean jetty:run
 # http://localhost:8080/spring
+
+mvn -Djetty.port=8080 -Djetty.contextPath=/ jetty:run
+index.jsp
 ```
 ## 2. Thymeleaf
 * [Documentacion](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
