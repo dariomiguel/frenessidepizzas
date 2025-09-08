@@ -16,7 +16,7 @@
 
 <body>
 <h1>hola</h1>
-
+<a th:href="@{/home.html}" class="btn btn-primary">Ir a Home</a>
 
 <!-- Boostrap core js -->
 <script type="text/javascript" th:src="@{webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
