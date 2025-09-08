@@ -9,6 +9,8 @@ $ mvn clean jetty:run
 # mvn -Djetty.port=8080 -Djetty.contextPath=/ jetty:run
 # index.jsp
 $ start msedge http://localhost:8080/
+# Volver a iniciar el docker en codespace
+# docker start -ai mysql-container
 ```
 ## 2. Thymeleaf
 * [Documentacion](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
