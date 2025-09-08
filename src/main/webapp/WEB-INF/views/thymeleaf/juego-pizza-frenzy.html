@@ -5,15 +5,47 @@
     <title>Página de inicio</title>
     <link rel="stylesheet" 
             th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/juego-pizza-frenzy.css}" />
 </head>
 <body class="container mt-5">
 
     <h1 th:text="${mensaje}">Texto por defecto</h1>
 
-    <p>Esta es tu primera página con Thymeleaf 🎉</p>
+    <div class="contenedor-de-juego">
+        <div id="container">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px"
+            height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+
+        <g id="no2">
+            <polygon name="body_front" points="360.5,406 62.757,371.5 61.125,72 360.5,89.5 	"/>
+            <path d="M376.5,455l-15.375-3.5l-0.625-362l14.834,0.5L376.5,455z
+                    M382.375,89.5l-7.041,0.5l1.166,365l5.354-4.937L382.375,89.5z"/>
+            <polygon points="443.5,372.5 382.5,404.375 382.5,89.5 443.5,76.375 	"/>
+            <path d="M443.5,76.375l7-1.781V410.5l-7,2.625V76.375z M431.5,411.172
+                    l12,1.953l-0.416-40.792l-11.584,6.438V411.172z"/>
+            <path d="M62.5,411.75l-12.875-2l-1.49-338.902L61.125,72L62.5,411.75z
+                    M62.5,411.75l8-3.25v-36.103l-8-0.897V411.75z"/>
+            <path d="M388.667,80.333l-356-18.833l98-16.5l337,17.333L388.667,80.333z
+                    M469.5,62.333l-80.833,18L388.5,90.917l81-20.583V62.333z M388.5,80.333l-359-18.458v7.458l359,21.583V80.333z"/>
+            <polygon points="360.5,185.5 61.495,163.5 61.196,89.5 360.5,107.5 	"/>
+            <polygon points="360.81,276 61.838,248.167 61.5,171 360.48,194.607 	"/>
+            <polygon points="361.016,388 62.5,351.5 61.857,252.834 360.5,283.5 	"/>
+            <circle cx="91.667" cy="127.667" r="5.333"/>
+            <circle cx="307.667" cy="141.667" r="5.333"/>
+            <circle cx="91.667" cy="215.667" r="5.333"/>
+            <circle cx="307.667" cy="229.667" r="5.333"/>
+            <circle cx="91.667" cy="312.667" r="5.333"/>
+            <circle cx="307.667" cy="332.667" r="5.333"/>
+        </g>
+        
+        </svg>
+        </div>
+
+            </div>
 
     <a th:href="@{/login}" class="btn btn-primary">Ir al Login</a>
 
     <script th:src="@{/webjars/bootstrap/5.2.0/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{js/juego-pizza-frenzy.js}"> </script>
 </body>
 </html>
