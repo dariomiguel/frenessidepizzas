@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Página de inicio</title>
-    <link rel="stylesheet" 
-            th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}" />
-    <link rel="stylesheet" th:href="@{/css/juego-pizza-frenzy.css}" />
+        <meta charset="UTF-8" />
+        <title>Página de inicio</title>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/juego-pizza-frenzy.css}" />
 </head>
 <body class="container mt-5">
-
-    <h1 th:text="${mensaje}">Texto por defecto</h1>
-
-    <div class="contenedor-de-juego">
         <div id="container">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px"
-            height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+        <div id="debug"></div>
 
-        <g id="no2">
-            <polygon name="body_front" points="360.5,406 62.757,371.5 61.125,72 360.5,89.5 	"/>
-            <path d="M376.5,455l-15.375-3.5l-0.625-362l14.834,0.5L376.5,455z
-                    M382.375,89.5l-7.041,0.5l1.166,365l5.354-4.937L382.375,89.5z"/>
-            <polygon points="443.5,372.5 382.5,404.375 382.5,89.5 443.5,76.375 	"/>
-            <path d="M443.5,76.375l7-1.781V410.5l-7,2.625V76.375z M431.5,411.172
-                    l12,1.953l-0.416-40.792l-11.584,6.438V411.172z"/>
-            <path d="M62.5,411.75l-12.875-2l-1.49-338.902L61.125,72L62.5,411.75z
-                    M62.5,411.75l8-3.25v-36.103l-8-0.897V411.75z"/>
-            <path d="M388.667,80.333l-356-18.833l98-16.5l337,17.333L388.667,80.333z
-                    M469.5,62.333l-80.833,18L388.5,90.917l81-20.583V62.333z M388.5,80.333l-359-18.458v7.458l359,21.583V80.333z"/>
-            <polygon points="360.5,185.5 61.495,163.5 61.196,89.5 360.5,107.5 	"/>
-            <polygon points="360.81,276 61.838,248.167 61.5,171 360.48,194.607 	"/>
-            <polygon points="361.016,388 62.5,351.5 61.857,252.834 360.5,283.5 	"/>
-            <circle cx="91.667" cy="127.667" r="5.333"/>
-            <circle cx="307.667" cy="141.667" r="5.333"/>
-            <circle cx="91.667" cy="215.667" r="5.333"/>
-            <circle cx="307.667" cy="229.667" r="5.333"/>
-            <circle cx="91.667" cy="312.667" r="5.333"/>
-            <circle cx="307.667" cy="332.667" r="5.333"/>
-        </g>
-        
+        <h1>Hover Test</h1>
+        <h2>w/ shape information output</h2>
+        <h4>
+                shows information about the shapes attributes (class in this case) on mouseover in
+                the green debug div <br /><br />
+                changes class on click, used a selector in the stylesheet to change the apparence of
+                the object
+                <br />
+                click to select, click again to deselect
+        </h4>
+
+        <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="1024px"
+                height="1024px"
+                viewBox="-116.951 -111.831 1024 1024"
+                enable-background="new -116.951 -111.831 1024 1024"
+                xml:space="preserve"
+        >
+                <g id="no2">
+
+                <path
+                                        onmouseover="getName(this)"
+                        onclick="select(this)"
+                        name="BandejaDeQueso"
+                        fill="none"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M45.5,400.169l133.333-1.669c0,0,24.666,3,16.333,23.667l-25,95   c0,0-7.667,17.666-27,16.333L-9.5,533.572c0,0-21.333-2.739-16-22.072s45.667-93.333,45.333-97.667S35.818,400.29,45.5,400.169z"
+                />
+
+                <path
+                                        onmouseover="getName(this)"
+                        onclick="select(this)"
+                        name="BandejaDeTomate"
+                        fill="none"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M233.5,398.5h134c0,0,18.75,3,22.5,14.75l-2,101   c0,0,1.75,15.644-20,19.322s-162,0-162,0s-23.75-3.322-18.25-22.072l23.75-97.25C211.5,414.25,214.25,404.25,233.5,398.5z"
+                />
+
+                <path
+                                        onmouseover="getName(this)"
+                        onclick="select(this)"
+                        name="BandejaDeAceituna"
+                        fill="none"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M424,398.5h131.75c0,0,23.5,1.25,28,19l23,90   c0,0,6.75,17.163-20.75,27.707H428.5c0,0-19.5-2.207-25.25-17.457L402,414C402,414,406,402.25,424,398.5z"
+                />
+
+                <path
+                                        onmouseover="getName(this)"
+                        onclick="select(this)"
+                        name="BandejaDeMasa"
+                        fill="none"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M621,398.5h124c0,0,24.25,1,32.591,12.324l45.75,98.5   c0,0,5.909,19.176-19.841,24.676H647.75c0,0-23.5-3.75-26.75-22l-22-95.5C599,416.5,604.25,401,621,398.5z"
+                />
+
+                <path
+                                        onmouseover="getName(this)"
+                        onclick="select(this)"
+                        name="BandejaDeAlbahaca"
+                        fill="none"
+                        stroke="#0C0B0A"
+                        stroke-miterlimit="10"
+                        d="M-23.75,538.5H145.5c0,0,17.75,2.5,14.25,21.5   s-26.5,104.25-26.5,104.25s-9,16-27,17.5s-181.5,0-181.5,0S-91.5,674.5-93.5,668s0-9.75,0-9.75L-48,556.5   C-48,556.5-40.25,543.429-23.75,538.5z"
+                />
+
+                <path
+                                        onmouseover="getName(this)"
+                        onclick="select(this)"
+                        name="BandejaDeSalsa"
+                        fill="none"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M199.75,538.5H365.5c0,0,18,1.5,21.75,15.75L385.75,660   c0,0,1.75,13-26,21.75h-185c0,0-22-5.75-23.25-18.5l23.75-109C175.25,554.25,183.75,540.75,199.75,538.5z"
+                />
+
+                </g>
         </svg>
+
+        <div id="selectedParts"></div>
+        <br /><br /><br />
         </div>
 
-            </div>
+        <a th:href="@{/login}" class="btn btn-primary">Ir al Login</a>
 
-    <a th:href="@{/login}" class="btn btn-primary">Ir al Login</a>
-
-    <script th:src="@{/webjars/bootstrap/5.2.0/js/bootstrap.bundle.min.js}"></script>
-    <script th:src="@{js/juego-pizza-frenzy.js}"> </script>
+        <script th:src="@{/webjars/bootstrap/5.2.0/js/bootstrap.bundle.min.js}"></script>
+        <script th:src="@{js/juego-pizza-frenzy.js}"></script>
 </body>
 </html>
