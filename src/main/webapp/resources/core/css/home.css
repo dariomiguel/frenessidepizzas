@@ -1,52 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
+
+.grid-ingredientes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px; /* espacio entre columnas y filas */
+    max-width: 600px;
+    margin: 0 auto; /* centrar en la página */
     text-align: center;
-    margin-top: 50px;
 }
 
-h1{
-    color: #264653;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f9f9f9;
-    font-family: Arial, sans-serif;
-}
-
-.contenedor {
-    display: flex;
-    gap: 40px; /* Espacio entre botones */
-}
-
-button {
-    padding: 15px 25px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #3498db;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-p {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.container{
+.grid-ingredientes div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+}
+
+.grid-ingredientes button {
+    margin-bottom: 5px;
+
+}
+
+.acciones {
+    margin-top: 20px;
+    text-align: center;
 }
