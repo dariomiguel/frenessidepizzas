@@ -21,35 +21,40 @@
   <a class="navbar-brand" href="#">UNLAM</a>
 </nav>
 
-<main role="main" class="container">
+<main role="main" >
 
     <h1>Bienvenidos al juego </h1>
         <h2>Elija los ingredientes de su pizza</h2>
 
-      <div class = "grid-ingredientes">
-          <div>
-            <button type="button" id="botonMasa" name="masa" class="botonIngredientes">Masa</button>
+      <div class = "container">
+         <div class = "row">
+          <div class = "col-sm">
+            <button type="button" id="botonMasa" name="masa" class="botonIngredientes btn btn-primary w-100">Masa</button>
             <p id="contadorMasas">0</p>
           </div>
-          <div>
-            <button type="button" id="botonSalsa" name="salsa" class="botonIngredientes">Salsa</button>
+          <div class = "col-sm">
+            <button type="button" id="botonSalsa" name="salsa" class="botonIngredientes btn btn-primary w-100">Salsa</button>
             <p id="contadorSalsas">0</p>
           </div>
-          <div>
-            <button type="button" id="botonQueso" name="queso" class="botonIngredientes">Queso</button>
+          <div class = "col-sm">
+            <button type="button" id="botonQueso" name="queso" class="botonIngredientes btn btn-primary w-100">Queso</button>
             <p id="contadorQuesos">0</p>
           </div>
-          <div>
-            <button type="button" id="botonAlbahaca" name="albahaca" class="botonIngredientes">Albahaca</button>
+         </div>
+
+          <div class = "row">
+          <div class = "col-sm">
+            <button type="button" id="botonAlbahaca" name="albahaca" class="botonIngredientes btn btn-primary w-100">Albahaca</button>
             <p id="contadorAlbahacas">0</p>
         </div>
-          <div>
-          <button type="button" id="botonAceituna" name="aceituna" class="botonIngredientes">Aceituna</button>
+          <div class = "col-sm">
+          <button type="button" id="botonAceituna" name="aceituna" class="botonIngredientes btn btn-primary w-100">Aceituna</button>
           <p id="contadorAceitunas">0</p>
         </div>
-          <div>
-          <button type="button" id="botonTomate" name="tomate" class="botonIngredientes">Tomate</button>
+          <div class = "col-sm">
+          <button type="button" id="botonTomate" name="tomate" class="botonIngredientes btn btn-primary w-100">Tomate</button>
           <p id="contadorTomates">0</p>
+          </div>
     </div>
     </div>
           <div>
@@ -66,7 +71,8 @@
 <!-- Boostrap core js -->
 <script type="text/javascript" th:src="@{webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
 <!-- custom js -->
-<script type="text/javascript" th:src="@{/js/juego-pizza-logic.js}"></script>
+<!--<script type="text/javascript" th:src="@{/js/juego-pizza-logic.js}"></script>-->
+<script th:src="@{/js/juego-pizza-logic.js(v=${#dates.createNow().time})}"></script>
 
 
 </body>
