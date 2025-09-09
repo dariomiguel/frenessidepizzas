@@ -1,39 +1,21 @@
-	// Juego Pizza Frenzy
-	// Estado y referencias
-	const partesSeleccionadas = [];
-	const debugEl = document.getElementById('debug');
-	const listaEl = document.getElementById('selectedParts');
+function getName(elm)  {
+	let objectName = elm.getAttribute('name');
+	document.getElementById('debug').innerHTML= "name on hover: " + objectName;
+};
 
-	// Helpers
-	function obtenerNombre(el) {
-		return el.dataset.name ?? el.getAttribute('name') ?? '(sin nombre)';
-	}
+let selectedParts = [];
 
-	function mostrarNombre(el) {
-		debugEl.textContent = 'name on hover: ' + obtenerNombre(el);
-	}
+function select(elm){
+	let partName = elm.getAttribute('name');
 
-	function renderSeleccionadas() {
-		listaEl.innerHTML = partesSeleccionadas.map(n => `${n}<br>`).join('');
-	}
+	selectedParts.push(partName);
+	console.log(selectedParts)
+	let objectClass = elm.getAttribute('class');
+	document.getElementById('debug').innerHTML = "class on click: " + objectClass;
 
-	// Handlers
-	function seleccionar(el) {
-		const nombre = obtenerNombre(el);
 
-		if (el.classList.contains('selected')) {
-			el.classList.remove('selected');
-			el.classList.add('unselected');
-			const i = partesSeleccionadas.indexOf(nombre);
-			if (i >= 0) partesSeleccionadas.splice(i, 1);
-		} else {
-			el.classList.add('selected');
-			el.classList.remove('unselected');
-			if (!partesSeleccionadas.includes(nombre)) {
-				partesSeleccionadas.push(nombre);
-			}
-		}
-
-		debugEl.textContent = 'class on click: ' + (el.className.baseVal ?? el.className);
-		renderSeleccionadas();
-	}
+	document.getElementById('selectedParts').innerHTML = "";
+	for (let i = 0; i < selectedParts.length; i++) {
+	document.getElementById('selectedParts').innerHTML += (selectedParts[i] + "<br>");}
+}
+//onclick="select(this)"
