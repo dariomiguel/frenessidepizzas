@@ -1,70 +1,36 @@
-/*let pedido = {
-    masas: 0,
-    salsas: 0,
-    quesos: 0,
-    aceitunas:0,
-    albahacas:0,
-    tomates:0,
+let pedido = {
+    masa: 0,
+    salsa: 0,
+    queso: 0,
+    aceituna:0,
+    albahaca:0,
+    tomate:0,
     lista: []
 };
 
-// Elementos
-const botonMasa = document.getElementById("botonMasa");
-const botonSalsa = document.getElementById("botonSalsa");
-const botonQueso = document.getElementById("botonQueso");
-const botonAlbahaca = document.getElementById("botonAlbahaca");
-const botonAceituna = document.getElementById("botonAceituna");
-const botonTomate = document.getElementById("botonTomate");
-const botonVerPedido = document.getElementById("entregarPedido");
-
-const cantidadDeMasa = document.getElementById("contadorMasas");
-const cantidadDeSalsa = document.getElementById("contadorSalsas");
-const cantidadDeQueso = document.getElementById("contadorQuesos");
-const cantidadDeAlbahaca = document.getElementById("contadorAlbahacas");
-const cantidadDeAceituna = document.getElementById("contadorAceitunas");
-const cantidadDeTomate = document.getElementById("contadorTomates");
-const resultadoPedido = document.getElementById("resultadoPedido");
-
-// Función genérica para actualizar
-function agregarIngrediente(tipo, boton, contadorElemento) {
-    pedido[tipo]++;
-    pedido.lista.push(boton.name);
-    contadorElemento.textContent = pedido[tipo];
+function seleccionarIngrediente(ingrediente){
+    
+    let ingredienteAgregadoAlPedido = ingrediente.getAttribute('name');
+    pedido[ingredienteAgregadoAlPedido]++;
+    pedido.lista.push(ingredienteAgregadoAlPedido);
+    console.log(pedido.lista)
 }
 
-// Listeners
-botonMasa.addEventListener("click", () => agregarIngrediente("masas", botonMasa, cantidadDeMasa));
-botonSalsa.addEventListener("click", () => agregarIngrediente("salsas", botonSalsa, cantidadDeSalsa));
-botonQueso.addEventListener("click", () => agregarIngrediente("quesos", botonQueso, cantidadDeQueso));
-botonAlbahaca.addEventListener("click", () => agregarIngrediente("albahacas", botonAlbahaca, cantidadDeAlbahaca));
-botonAceituna.addEventListener("click", () => agregarIngrediente("aceitunas", botonAceituna, cantidadDeAceituna));
-botonTomate.addEventListener("click", () => agregarIngrediente("tomates", botonTomate, cantidadDeTomate));
-
-// Ver pedido
+const botonVerPedido = document.getElementById("entregarPedido");
 botonVerPedido.addEventListener("click", () => {
     const pedidoFinal = pedido.lista.join(", ");
     console.log("Pedido:", pedidoFinal);
-    resultadoPedido.textContent = `Tu pedido: ${pedidoFinal}`;
-});*/
+    limpiarListaDePedidos();
+});
 
-function getName(elm)  {
-/*    let objectName = elm.getAttribute('name');
-    document.getElementById('debug').innerHTML= "name on hover: " + objectName;*/
-    console.log("hovered");
-};
+// Para todos los ingredientes, se le asigna un listener que llama a la función seleccionarIngrediente
+document.querySelectorAll('.ingredienteEnBandeja').forEach(ingrediente => {
+    ingrediente.addEventListener('click', () => seleccionarIngrediente(ingrediente));
+});
 
-let selectedParts = [];
-
-function select(elm){
-    let partName = elm.getAttribute('name');
-
-    selectedParts.push(partName);
-    console.log(selectedParts)
-    let objectClass = elm.getAttribute('class');
-    document.getElementById('debug').innerHTML = "class on click: " + objectClass;
-
-
-    document.getElementById('selectedParts').innerHTML = "";
-    for (let i = 0; i < selectedParts.length; i++) {
-        document.getElementById('selectedParts').innerHTML += (selectedParts[i] + "<br>");}
+const limpiarListaDePedidos = () => {
+    for (const [k, v] of Object.entries(pedido)){ 
+        if (Array.isArray(v)) pedido[k].length = 0; // vacía arrays 
+        else if (typeof v === 'number') pedido[k] = 0; // resetea números 
+    }
 }

@@ -23,3 +23,13 @@
     margin-top: 20px;
     text-align: center;
 }
+/* 
+.resaltadoIngrediente {
+    transition: transform 0.2s ease;
+}
+
+.resaltadoIngrediente:hover{
+    transform-origin: top left;   
+    transform: scale(1.05); 
+    cursor: pointer;
+} */
