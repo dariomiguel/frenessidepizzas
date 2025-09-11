@@ -23,78 +23,81 @@
 
         <main role="main" >
 
-        <h1>Bienvenidos al juego </h1>
-                <h2>Elija los ingredientes de su pizza</h2>
+        <h1>Bienvenidos al Frenesí de Pizzas </h1>
 
-        <div class = "container">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        x="0px"
-                        y="0px"
-                        width="1024px"
-                        height="1024px"
-                        viewBox="-116.951 -111.831 1024 1024"
-                        xml:space="preserve"
-                >
-                        <g id="no2">
+        <div class = "contenedorHUD">
+            <svg class="svgContainer"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="-398 0 1820 1024"
+                 xml:space="preserve">
 
-                        <path   
-                                class="ingredienteEnBandeja resaltadoDeIngrediente"
-                                name="queso"
-                                fill="transparent"
-                                stroke="#000000"
-                                stroke-miterlimit="10"
-                                d="M45.5,400.169l133.333-1.669c0,0,24.666,3,16.333,23.667l-25,95   c0,0-7.667,17.666-27,16.333L-9.5,533.572c0,0-21.333-2.739-16-22.072s45.667-93.333,45.333-97.667S35.818,400.29,45.5,400.169z"
-                        />
+                    <path
+                        class="ingredienteEnBandeja resaltadoDeIngredientes"
+                        name="queso"
+                        fill="transparent"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M163.463,512.033l133.333-1.668c0,0,24.666,3,16.333,23.667l-25,95
+            c0,0-7.667,17.666-27,16.334l-152.666,0.072c0,0-21.333-2.74-16-22.072c5.333-19.334,45.667-93.334,45.333-97.668
+            S153.781,512.154,163.463,512.033z"/>
 
-                        <path
-                        class="ingredienteEnBandeja resaltadoDeIngrediente"
-                                name="tomate"
-                                fill="transparent"
-                                stroke="#000000"
-                                stroke-miterlimit="10"
-                                d="M233.5,398.5h134c0,0,18.75,3,22.5,14.75l-2,101   c0,0,1.75,15.644-20,19.322s-162,0-162,0s-23.75-3.322-18.25-22.072l23.75-97.25C211.5,414.25,214.25,404.25,233.5,398.5z"
-                        />
 
-                        <path
-                        class="ingredienteEnBandeja resaltadoDeIngrediente"
-                                name="aceituna"
-                                fill="transparent"
-                                stroke="#000000"
-                                stroke-miterlimit="10"
-                                d="M424,398.5h131.75c0,0,23.5,1.25,28,19l23,90   c0,0,6.75,17.163-20.75,27.707H428.5c0,0-19.5-2.207-25.25-17.457L402,414C402,414,406,402.25,424,398.5z"
-                        />
+                    <path
+                        class="ingredienteEnBandeja resaltadoDeIngredientes"
+                        name="tomate"
+                        fill="transparent"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M351.463,510.365h134c0,0,18.75,3,22.5,14.75l-2,101
+                    c0,0,1.75,15.643-20,19.322c-21.75,3.678-162,0-162,0s-23.75-3.322-18.25-22.072l23.75-97.25
+                    C329.463,526.115,332.213,516.115,351.463,510.365z"/>
 
-                        <path
-                        class="ingredienteEnBandeja resaltadoDeIngrediente"
-                                name="masa"
-                                fill="transparent"
-                                stroke="#000000"
-                                stroke-miterlimit="10"
-                                d="M621,398.5h124c0,0,24.25,1,32.591,12.324l45.75,98.5   c0,0,5.909,19.176-19.841,24.676H647.75c0,0-23.5-3.75-26.75-22l-22-95.5C599,416.5,604.25,401,621,398.5z"
-                        />
 
-                        <path
-                        class="ingredienteEnBandeja resaltadoDeIngrediente"
-                                name="albahaca"
-                                fill="transparent"
-                                stroke="#0C0B0A"
-                                stroke-miterlimit="10"
-                                d="M-23.75,538.5H145.5c0,0,17.75,2.5,14.25,21.5   s-26.5,104.25-26.5,104.25s-9,16-27,17.5s-181.5,0-181.5,0S-91.5,674.5-93.5,668s0-9.75,0-9.75L-48,556.5   C-48,556.5-40.25,543.429-23.75,538.5z"
-                        />
+                    <path
+                        class="ingredienteEnBandeja resaltadoDeIngredientes"
+                        name="aceituna"
+                        fill="transparent"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M541.283,510.365h131.75c0,0,23.5,1.25,28,19l23,90
+                    c0,0,6.75,17.162-20.75,27.707h-157.5c0,0-19.5-2.207-25.25-17.457l-1.25-103.75C519.283,525.865,523.283,514.115,541.283,510.365
+                    z"/>
 
-                        <path
-                        class="ingredienteEnBandeja resaltadoDeIngrediente"
-                                name="salsa"
-                                fill="transparent"
-                                stroke="#000000"
-                                stroke-miterlimit="10"
-                                d="M199.75,538.5H365.5c0,0,18,1.5,21.75,15.75L385.75,660   c0,0,1.75,13-26,21.75h-185c0,0-22-5.75-23.25-18.5l23.75-109C175.25,554.25,183.75,540.75,199.75,538.5z"
-                        />
 
-                        </g>
-                </svg>
+                    <path
+                        class="ingredienteEnBandeja resaltadoDeIngredientes"
+                        name="masa"
+                        fill="transparent"
+                        stroke="#000000"
+                        stroke-miterlimit="10"
+                        d="M738.283,510.365h124c0,0,24.25,1,32.591,12.325l45.75,98.5
+                    c0,0,5.909,19.176-19.841,24.676h-155.75c0,0-23.5-3.75-26.75-22l-22-95.5C716.283,528.365,721.533,512.865,738.283,510.365z"/>
+
+
+                    <path
+                        class="ingredienteEnBandeja resaltadoDeIngredientes"
+                        name="albahaca"
+                        fill="transparent"
+                        stroke="#0C0B0A"
+                        stroke-miterlimit="10"
+                        d="M94.674,649.351h169.25c0,0,17.75,2.5,14.25,21.5
+                    s-26.5,104.25-26.5,104.25s-9,16-27,17.5s-181.5,0-181.5,0s-16.25-7.25-18.25-13.75s0-9.75,0-9.75l45.5-101.75
+                    C70.424,667.351,78.174,654.278,94.674,649.351z"/>
+
+
+                    <path
+                            class="ingredienteEnBandeja resaltadoDeIngredientes"
+                            name="salsa"
+                            fill="transparent"
+                            stroke="#000000"
+                            stroke-miterlimit="10"
+                            d="M317.716,649.687h165.75c0,0,18,1.5,21.75,15.75l-1.5,105.75
+                        c0,0,1.75,13-26,21.75h-185c0,0-22-5.75-23.25-18.5l23.75-109C293.216,665.437,301.716,651.937,317.716,649.687z"/>
+
+
+            </svg>
+
         </div>
                 <div>
                 <button type="button"  id="entregarPedido" class="botonIngredientes entregar">Entregar Pedido</button>
