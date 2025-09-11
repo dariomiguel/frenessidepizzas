@@ -14,7 +14,7 @@
 .svgContainer {
     width: 70vw;
     aspect-ratio: 16 / 9;  /* Mantener proporción16:9 */
-    background-image: url("https://subir-imagen.com/images/2025/09/10/imagen1820x1024.png");
+    background-image: url("/resources/core/img/fondo.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
