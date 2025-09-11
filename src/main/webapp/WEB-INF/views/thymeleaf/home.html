@@ -28,7 +28,6 @@
 
         <div class = "container">
                 <svg
-                        version="1.1"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         x="0px"
@@ -36,7 +35,6 @@
                         width="1024px"
                         height="1024px"
                         viewBox="-116.951 -111.831 1024 1024"
-                        enable-background="new -116.951 -111.831 1024 1024"
                         xml:space="preserve"
                 >
                         <g id="no2">
@@ -112,8 +110,8 @@
         <!-- Boostrap core js -->
         <script type="text/javascript" th:src="@{webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
         <!-- custom js -->
-        <script type="text/javascript" th:src="@{/js/juego-pizza-logic.js}"></script>
-        <!--<script th:src="@{/js/juego-pizza-logic.js(v=${#dates.createNow().time})}"></script>-->
+        <script type="module" th:src="@{/js/juego-logic.js}"></script>
+        <!--<script th:src="@{/js/juego-logic.js(v=${#dates.createNow().time})}"></script>-->
 
 
         </body>
