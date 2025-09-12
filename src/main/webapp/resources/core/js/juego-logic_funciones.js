@@ -55,6 +55,23 @@ export function renderizarPedidos(ordenDelCliente) {
     let pedidoEnPantalla = document.querySelectorAll('.ingredienteParaEntregar.ingredientesParaCliente');
     pedidoEnPantalla.forEach(ingrediente => {
         ingrediente.style.display = "block";
-        console.log(ingrediente);
     })
+}
+
+export function compararPedidos(ordenDelCliente, pedidoRealizado ) {
+    let contadorPuntos = 0;
+    let cantidadDeIngredientesDelCliente = ordenDelCliente.length;
+    let cantidadDeIngredientesDelPedidoRealizado = pedidoRealizado.length;
+
+    if (cantidadDeIngredientesDelCliente !== cantidadDeIngredientesDelPedidoRealizado) {
+        contadorPuntos -= Math.abs(cantidadDeIngredientesDelCliente - cantidadDeIngredientesDelPedidoRealizado) ;
+    }
+    for(let i = 0; i < ordenDelCliente.length; i++) {
+        if ( ordenDelCliente[i] === pedidoRealizado[i] ) {
+           contadorPuntos += 2;
+        }else{
+            contadorPuntos -= 3;
+        }
+    }
+    return contadorPuntos;
 }

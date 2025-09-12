@@ -1,6 +1,6 @@
-import {seleccionarIngrediente, limpiarListaDePedidos, renderizarPedidos} from "./juego-logic_funciones.js";
+import {seleccionarIngrediente, limpiarListaDePedidos, renderizarPedidos, compararPedidos} from "./juego-logic_funciones.js";
 
-let ordenDelCliente = ["masa, salsa, queso, aceituna"];
+let ordenDelCliente = ["masa", "salsa", "queso", "aceituna"];
 
 let pedido = {
     masa: 0,
@@ -12,10 +12,15 @@ let pedido = {
     lista: []
 };
 
+let puntosTotales = 0;
+
 const botonEntregarPedido = document.getElementById("entregarPedido");
 botonEntregarPedido.addEventListener("click", () => {
-    const pedidoFinal = pedido.lista.join(", ");
-    console.log("Pedido:", pedidoFinal);
+    let puntosObtenidos = compararPedidos(ordenDelCliente, pedido.lista) * 50;
+    console.log(puntosObtenidos + " puntos obtenidos");
+    puntosTotales += puntosObtenidos;
+    console.log("Puntos totales: " + puntosTotales);
+
     limpiarListaDePedidos(pedido);
 });
 
@@ -27,7 +32,7 @@ document.querySelectorAll('.ingredienteEnBandeja').forEach(ingrediente => {
 const botonCrearNuevoPedido = document.getElementById("crearOrdenDeCliente");
 
 botonCrearNuevoPedido.addEventListener("click",() => {
-    console.log("ordenDelCliente:", ordenDelCliente);
     renderizarPedidos(ordenDelCliente);
+    console.log("El pedido del cliente es:" + ordenDelCliente);
 })
 
