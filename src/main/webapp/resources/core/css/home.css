@@ -13,6 +13,7 @@
 
 .svgContainer {
     width: 70vw;
+    max-width: 1024px;
     aspect-ratio: 16 / 9;  /* Mantener proporción16:9 */
     background-image: url("/resources/core/img/fondo.svg");
     background-size: cover;
@@ -20,6 +21,10 @@
     background-repeat: no-repeat;
     border: 2px solid #333;
     border-radius: 12px;
+}
+
+.ingredienteParaEntregar{
+    display: none;
 }
 
 /* 

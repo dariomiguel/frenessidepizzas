@@ -1,4 +1,4 @@
-import {seleccionarIngrediente, limpiarListaDePedidos, permitirIngrediente} from "../juego-logic_funciones.js";
+import {seleccionarIngrediente, limpiarListaDePedidos, ingredientePermitido} from "../juego-logic_funciones.js";
 
 let pedido;
 
@@ -17,32 +17,32 @@ describe('Reglas de armado de pizza', () => {
         pedido = resetPedido();
     });
 
-    describe('permitirIngrediente()', () => {
+    describe('ingredientePermitido()', () => {
         it('solo permite "masa" como primer ingrediente', () => {
             const lista = [];
-            expect(permitirIngrediente('masa', lista)).toBeTrue();
-            expect(permitirIngrediente('salsa', lista)).toBeFalse();
-            expect(permitirIngrediente('queso', lista)).toBeFalse();
+            expect(ingredientePermitido('masa', lista)).toBeTrue();
+            expect(ingredientePermitido('salsa', lista)).toBeFalse();
+            expect(ingredientePermitido('queso', lista)).toBeFalse();
         });
 
         it('solo permite "salsa" como segundo ingrediente', () => {
             const lista = ['masa'];
-            expect(permitirIngrediente('salsa', lista)).toBeTrue();
-            expect(permitirIngrediente('queso', lista)).toBeFalse();
-            expect(permitirIngrediente('masa', lista)).toBeFalse();
+            expect(ingredientePermitido('salsa', lista)).toBeTrue();
+            expect(ingredientePermitido('queso', lista)).toBeFalse();
+            expect(ingredientePermitido('masa', lista)).toBeFalse();
         });
 
         it('solo permite "queso" como tercer ingrediente', () => {
             const lista = ['masa', 'salsa'];
-            expect(permitirIngrediente('queso', lista)).toBeTrue();
-            expect(permitirIngrediente('aceituna', lista)).toBeFalse();
+            expect(ingredientePermitido('queso', lista)).toBeTrue();
+            expect(ingredientePermitido('aceituna', lista)).toBeFalse();
         });
 
         it('a partir del cuarto ítem permite cualquier ingrediente', () => {
             const lista = ['masa', 'salsa', 'queso'];
-            expect(permitirIngrediente('aceituna', lista)).toBeTrue();
-            expect(permitirIngrediente('albahaca', lista)).toBeTrue();
-            expect(permitirIngrediente('tomate', lista)).toBeTrue();
+            expect(ingredientePermitido('aceituna', lista)).toBeTrue();
+            expect(ingredientePermitido('albahaca', lista)).toBeTrue();
+            expect(ingredientePermitido('tomate', lista)).toBeTrue();
         });
     });
 
