@@ -75,3 +75,15 @@ export function compararPedidos(ordenDelCliente, pedidoRealizado ) {
     }
     return contadorPuntos;
 }
+
+export function nuevoPedido(toppingsDisponibles) {
+    const ingredientesBase = ["masa", "salsa", "queso"];
+    let nuevoPedido = [...ingredientesBase];
+    let cantidadDeToppingsDisponibles = toppingsDisponibles.length;
+
+    // Agregar entre 0 y 3 toppings aleatorios
+    const toppingAleatorio = Math.floor(Math.random() * cantidadDeToppingsDisponibles);
+
+    nuevoPedido.push(toppingsDisponibles[toppingAleatorio]);
+    return nuevoPedido;
+}
